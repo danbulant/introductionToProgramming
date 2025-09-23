@@ -27,4 +27,8 @@ the (fixed) probability that the gambler wins each bet. Use your program
 to try to learn how this probability affects the chance of winning and the
 expected number of bets. Try a value of $p$ close to $0.5$ (say, $0.48$).
 
+Small changes of probability affect win % a lot, for example the chance of
+doubling money from $100$ to $200$ is roughly 50% for $p=0.5$, but falls to
+less than 5% for $p=0.49$ and 0% below that.
+
 #embedClass(name: "Gambler")

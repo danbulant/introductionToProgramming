@@ -17,7 +17,7 @@ public class GamblerPlot {
       else
         cash--;
 
-      GamblerPlot.printCash(cash);
+      printCash(cash);
     }
 
     boolean won = cash == goal;
