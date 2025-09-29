@@ -67,6 +67,7 @@ public class Card {
     var top = "";
     top += value;
     if(this.value > 10) {
+      // face cards are empty
       top += "   ";
     } else {
       // and for numbered cards, show the suit characters
@@ -92,7 +93,7 @@ public class Card {
       // instead of using 3 rows we have a gap in the 3rd row
       output += " ";
       output += this.value >= 6 ? suit : " ";
-      // odd or 10
+      // odd or 10 have a symbol in the middle
       output += this.value % 2 == 1 || this.value == 10 ? suit : " ";
       output += this.value >= 6 ? suit : " ";
       output += " ";
@@ -113,7 +114,8 @@ public class Card {
   }
 
   // Shows cards next to each other (left to right)
-  // assumes that sprintCard returns the same width for each card (and each row of a card)
+  // for visuals, assumes that sprintCard returns the same width for each card (and each row of a card)
+  // for correctness, assumes that sprintCard always returns 4 rows (is asserted)
   public static String sprintCards(Card[] cards) {
     String[] output = { "", "", "", "" };
 
@@ -121,6 +123,7 @@ public class Card {
     // save the row into relevant output
     for(var i = 0; i < cards.length; i++) {
       var cardstr = cards[i].sprintCard().split("\n");
+      assert output.length == cardstr.length;
       for(var x = 0; x < cardstr.length; x++) {
         output[x] += cardstr[x] + " ";
       }

@@ -6,8 +6,12 @@
   #doc
 ]
 
-#let embedClass(name: str) = {
+#let embedClass(name: str, label: none) = {
+  show figure: set block(width: 100%)
   show figure: set align(left)
   show figure.caption: set align(center)
-  figure(caption: name, raw(read("../" + name + ".java"), lang:"java", block: true))
+  [
+    #figure(caption: name, kind: "Class", supplement: [Class], raw(read("../" + name + ".java"), lang:"java", block: true))
+    #label
+  ]
 }
