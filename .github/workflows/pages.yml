@@ -28,6 +28,8 @@ jobs:
       - uses: typst-community/setup-typst@v4
 
       - name: Build site
+        env:
+          TYPST_FEATURES: html
         run: |
           nu build.nu
 
