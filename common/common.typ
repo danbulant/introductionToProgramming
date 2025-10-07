@@ -1,9 +1,7 @@
 #import "@preview/prequery:0.2.0": prequery
 
 #let template(doc) = context {
-  if target() != "html" {
-    set page(height: auto)
-  }
+  set page(height: auto)
   show link: underline
   set quote(block: true)
   doc
