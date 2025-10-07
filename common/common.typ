@@ -1,10 +1,13 @@
+#import "@preview/prequery:0.2.0": prequery
 
-#let template(doc) = [
-  #set page(height: auto)
-  #show link: underline
-  #set quote(block: true)
-  #doc
-]
+#let template(doc) = context {
+  if target() != "html" {
+    set page(height: auto)
+  }
+  show link: underline
+  set quote(block: true)
+  doc
+}
 
 #let embedClass(name: str, label: none) = {
   show figure: set block(width: 100%)
@@ -15,3 +18,17 @@
     #label
   ]
 }
+
+#let runCommand(cmd: str, ..args) = prequery(
+  (data: cmd, path: args.pos().at(0)),
+  <cmd>,
+  () => {
+    let output = read(..args)
+    raw(block: true, output)
+  },
+  fallback: [
+    ```
+    ...
+    ```
+  ]
+)

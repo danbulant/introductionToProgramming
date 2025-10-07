@@ -11,3 +11,5 @@ each { |folder|
   rm -f $zip
   7z a $zip *
 }
+
+typst compile main.typ
