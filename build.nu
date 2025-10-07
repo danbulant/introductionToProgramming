@@ -7,9 +7,11 @@ each { |folder|
   if ("doc.typ" | path exists) {
     typst compile doc.typ
   }
-  let zip = ("../" + $folder + ".zip")
-  rm -f $zip
-  7z a $zip *
+  if ($env.CI? | is-empty) {
+    let zip = ("../" + $folder + ".zip")
+    rm -f $zip
+    7z a $zip *
+  }
 }
 
-typst compile main.typ
+typst compile main.typ -o pages main.pdf
