@@ -1,4 +1,4 @@
-ls | where type == "dir" | sort-by name -n | get name | where $it != "common" |
+ls | where type == "dir" | sort-by name -n | get name | where $it != "common" and $it != "pages" |
 each { |folder|
   cd $folder
   if not ("common" | path exists) {
@@ -14,4 +14,4 @@ each { |folder|
   }
 }
 
-typst compile main.typ -o pages main.pdf
+typst compile main.typ pages/main.pdf
