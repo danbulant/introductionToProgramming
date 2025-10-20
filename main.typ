@@ -15,7 +15,7 @@ Collection of solutions to programming exercises as part of Introduction to Prog
 )
 
 #{
-  let count = 6;
+  let count = 7;
   for week in range(1, count + 1) {
     let a = "./week" + str(week) + "/doc.typ"
     include a
