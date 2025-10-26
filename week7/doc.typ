@@ -3,7 +3,7 @@
 
 #show: template
 
-= Week 6
+= Week 7
 
 == Exercise 2.3.22
 

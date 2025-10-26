@@ -15,8 +15,8 @@ Collection of solutions to programming exercises as part of Introduction to Prog
 )
 
 #{
-  let count = 7;
-  for week in range(1, count + 1) {
+  let count = 9;
+  for week in range(1, count + 1).filter(it => it != 8) {
     let a = "./week" + str(week) + "/doc.typ"
     include a
   }

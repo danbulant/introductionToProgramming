@@ -6,6 +6,7 @@ pkgs.mkShell rec {
     jdk
     typst
     tinymist
+    nushell
   ];
   nativeBuildInputs = with pkgs; [
     jre
