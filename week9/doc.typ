@@ -15,6 +15,79 @@ your ZIP code will give you a weather forecast.
 - You may use city names instead of zip code
 - Note: Do not overcommit; we are expecting something simple.
 
+#embedClass(name: "Weather")
+
+Note: Other used classes omited for clarity in PDF form, see ZIP or git source. Includes a simple HTML parser and tag-name/classes selector queries.
+
+Example output:
+
+#[
+#show raw.where(block: true): set par(leading: 2pt)
+```
+╭────────────┬─────────────────────────────┬────────────╮
+│ 5.8°       │ Oedum                       │ 1 m/s      │
+│            │ 91 mins ago  - 16 km away   │            │
+├────────────┼─────────────────────────────┼────────────┤
+│ 9.1°       │ Sletterhage Fyr             │ 7 m/s      │
+│            │ 91 mins ago  - 20 km away   │            │
+├────────────┼─────────────────────────────┼────────────┤
+│ 4.7°       │ Tirstrup                    │ 2 m/s      │
+│            │ 31 mins ago  - 30 km away   │            │
+├────────────┼─────────────────────────────┼────────────┤
+│ 4.7°       │ Horsens/Bygholm             │ 3 m/s      │
+│            │ 91 mins ago  - 42 km away   │            │
+├────────────┼─────────────────────────────┼────────────┤
+│ 5.0°       │ Hald V                      │ 2 m/s      │
+│            │ 91 mins ago  - 46 km away   │            │
+├────────────┼─────────────────────────────┼────────────┤
+│ 9.8°       │ Roesnaes                    │ 9 m/s      │
+│            │ 91 mins ago  - 61 km away   │            │
+├────────────┼─────────────────────────────┼────────────┤
+│ 4.9°       │ Isenvad                     │ 2 m/s      │
+│            │ 91 mins ago  - 64 km away   │            │
+├────────────┼─────────────────────────────┼────────────┤
+│ 9.2°       │ Gniben                      │ 9 m/s      │
+│            │ 91 mins ago  - 69 km away   │            │
+├────────────┼─────────────────────────────┼────────────┤
+│ 5.0°       │ Karup                       │ 2 m/s      │
+│            │ 31 mins ago  - 69 km away   │            │
+├────────────┼─────────────────────────────┼────────────┤
+│ 7.1°       │ Odense / Beldringe          │ 3 m/s      │
+│            │ 31 mins ago  - 76 km away   │            │
+├────────────┼─────────────────────────────┼────────────┤
+│ 4.8°       │ Aars Syd                    │ 0 m/s      │
+│            │ 91 mins ago  - 79 km away   │            │
+├────────────┼─────────────────────────────┼────────────┤
+│ 5.6°       │ Billund Lufthavn            │ 1 m/s      │
+│            │ 41 mins ago  - 81 km away   │            │
+├────────────┼─────────────────────────────┼────────────┤
+│ 8.6°       │ Aarslev                     │ 3 m/s      │
+│            │ 91 mins ago  - 95 km away   │            │
+├────────────┼─────────────────────────────┼────────────┤
+│ 6.4°       │ Vamdrup                     │ 3 m/s      │
+│            │ 31 mins ago  - 98 km away   │            │
+├────────────┼─────────────────────────────┼────────────┤
+│ 6.5°       │ Mejrup                      │ 2 m/s      │
+│            │ 91 mins ago  - 99 km away   │            │
+├────────────┼─────────────────────────────┼────────────┤
+│ 8.1°       │ Borris                      │ 2 m/s      │
+│            │ 91 mins ago  - 100 km away  │            │
+├────────────┼─────────────────────────────┼────────────┤
+│ 7.8°       │ Askov                       │ 2 m/s      │
+│            │ 91 mins ago  - 103 km away  │            │
+├────────────┼─────────────────────────────┼────────────┤
+│ 9.8°       │ Assens/Toroe                │ 4 m/s      │
+│            │ 91 mins ago  - 103 km away  │            │
+├────────────┼─────────────────────────────┼────────────┤
+│ 8.7°       │ Holbaek                     │ 5 m/s      │
+│            │ 91 mins ago  - 106 km away  │            │
+├────────────┼─────────────────────────────┼────────────┤
+│ 5.4°       │ Aalborg                     │ 3 m/s      │
+│            │ 31 mins ago  - 107 km away  │            │
+╰────────────┴─────────────────────────────┴────────────╯
+```
+]
+
 == Exercise 9.1
 
 Write a class `Person` to represent a person. The class should have the following fields: `String firstName`, `String lastName`, `int age`, and `Person spouse`. The `spouse` field is initially `null`.

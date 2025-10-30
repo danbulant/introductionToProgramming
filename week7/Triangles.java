@@ -11,7 +11,7 @@ public class Triangles {
 
         if (order > 1)
             // vertical alignment to center it properly within the root triangle
-            recurse(order, 0.5, (height(1)) / 2 - 0.15, 0.5);
+            recurse(order - 1, 0.5, (height(1)) / 2 - 0.15, 0.5);
 
         StdDraw.show();
     }
