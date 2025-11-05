@@ -7,12 +7,16 @@
   doc
 }
 
-#let embedClass(name: str, label: none) = {
+#let embedClass(name: str, label: none, ..arguments) = {
   show figure: set block(width: 100%)
   show figure: set align(left)
   show figure.caption: set align(center)
+  let directory = arguments.named().at("directory", default: "")
+  let directory = if directory.len() == 0 { "" } else { directory + "/" }
+  let path = arguments.named().at("path", default: "../" + directory + name + ".java")
+  let kind = arguments.named().at("kind", default: "Class")
   [
-    #figure(caption: name, kind: "Class", supplement: [Class], raw(read("../" + name + ".java"), lang:"java", block: true))
+    #figure(caption: name, kind: kind, supplement: [#kind], raw(read(path), lang:"java", block: true))
     #label
   ]
 }
