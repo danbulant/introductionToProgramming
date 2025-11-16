@@ -2,7 +2,7 @@
 
 #show: template
 
-= Week 10
+= Week 11
 
 == Exercise 1.3.45
 
@@ -15,7 +15,7 @@ with a small population—say, $x = 0.01$—and study the result of iterating th
 $x = 1 - 1/r$ ? Can you say anything about the population when $r$ is $3.5$? $3.8$? $5$?
 
 #table(
-  columns: 3,
+  columns: 4,
   $3.5$,
   $3.8$,
   $5$,
@@ -26,15 +26,21 @@ $x = 1 - 1/r$ ? Can you say anything about the population when $r$ is $3.5$? $3.
   [Sustained $1-1/r$]
 )
 
+#embedClass(name: "Chaos")
+
 == Exercise 1.4.26
 
 _Music shuffling_. You set your music player to shuffle mode. It plays each of
-the n songs before repeating any. Write a program to estimate the likelihood that
+the $n$ songs before repeating any. Write a program to estimate the likelihood that
 you will not hear any sequential pair of songs (that is, song 3 does not follow song
 2, song 10 does not follow song 9, and so on).
+
+#embedClass(name: "RandomSequenceChange")
 
 == Exercise 1.5.32
 
 _Clock_. Write a program that displays an animation of the second, minute,
 and hour hands of an analog clock. Use the method `StdDraw.pause(1000)` to
 update the display roughly once per second.
+
+#embedClass(name: "Clock")
