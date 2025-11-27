@@ -21,11 +21,11 @@ For each of the following exceptions, mark whether it is a checked or unchecked:
  - `ArrayIndexOutOfBoundsException` - unchecked
  - `NumberFormatException` - unchecked
  - `ConcurrentModificationException` - unchecked
- - `InterruptedException` - unchecked
+ - `InterruptedException` - checked
 
 How many of these have you experienced?
 
-All of these except ConcurrentModificationException as I didn't write multithreaded programs in Java.
+Most of these, except the last two as I haven't written threaded programs in java yet.
 
 == Exercise 13.07
 
@@ -33,6 +33,8 @@ Write a class to represent a gearbox with five gears and a gear for reverse. Add
 
 a. when switching from any gear other than the first gear into reverse (and vice versa), and
 b. when skipping one or more gears. For example, it is illegal to switch directly from the first gear to the third gear. It is also not allowed to switch directly from reverse to the fourth gear.
+
+#embedClass(name: "Gearbox")
 
 == Exercise 13.09
 
