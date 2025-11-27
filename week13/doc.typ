@@ -9,7 +9,7 @@
 Explain - in your own words - what is an exception?
 
 An object containing information about why a semi-hidden branching happened, usually used for error states. 
-Thrown exceptions bubble up, as if a return was used, until there's a registered exception handler for a given code region, usually by try/catch.
+Thrown exceptions bubble up the call stack, as if a return was used, until there's a registered exception handler for a given code region, usually by try/catch.
 
 == Exercise 13.05
 
