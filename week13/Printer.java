@@ -48,11 +48,17 @@ public class Printer {
   }
 
   public static void main(String[] args) {
-    try {
-      print();
-      System.out.println("Printed successfully, thanks for your patronage.");
-    } catch (Exception e) {
-      System.err.println(e.getMessage());
+    while(true){
+      try {
+        print();
+        System.out.println("Printed successfully, thanks for your patronage.");
+        break;
+      } catch (Exception e) {
+        System.err.println(e.getMessage());
+        try {
+          Thread.sleep(1000);
+        } catch(Exception interrupt) {}
+      }
     }
   }
 }
