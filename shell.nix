@@ -3,14 +3,12 @@
 }:
 pkgs.mkShell rec {
   buildInputs = with pkgs; [
-    jdk
+    (jdk.override { enableJavaFX = true; })
     typst
     tinymist
     nushell
   ];
-  nativeBuildInputs = with pkgs; [
-    jre
-  ];
+  nativeBuildInputs = with pkgs; [];
 
   TYPST_FEATURES = "html";
 }
